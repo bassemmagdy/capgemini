@@ -1,6 +1,6 @@
 # App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5 and Django version=4 and sqlite as requirements
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5 and Django version=4 and sqlite database as requirements
 
 
 ## Steps to run for local development 
@@ -24,9 +24,17 @@ it should be listening on port: 4200 by defualt
     ```
 should be listening on port: 8000 by default
 
+## Steps to run dockerized app:
+- With docker installed and build the frontend image to host on nginx and compose the app!
+    ```
+        - cd app
+        - docker build -t angular-app .
+        - cd ..
+        - docker-compose up --build
+    ```
+with the few lines above containers and app are brought live. with frontend served on http://localhost:8080 through nginx and the backend on http://localhost:8000 
 
 ## Available Endpoints:
-
 1) list movies: GET /api/movies
 2) create movies: POST /api/movies
 3) get movie details: GET /api/movies/:id/details
