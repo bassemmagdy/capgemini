@@ -1,0 +1,45 @@
+.card {
+  height: 250px;
+  cursor: pointer;
+  background-color: #13425f !important;
+  height: 80%;
+  box-shadow: #0a58ca 0px 25px 50px -12px;
+  width: 85%;
+  margin: auto;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+
+.card-text {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+  background-color: var(--nav-color);
+  text-transform: capitalize;
+  border-radius: 10px;
+  border: 1px solid rgb(0 0 0 / 0.1);
+  padding: 10px 10px 0;
+}
+.movies-img {
+  aspect-ratio: 4/3;
+}
+.card-title {
+  font-size: 22px;
+}
+
+.card-body {
+  padding: 1rem 1rem 0 1rem;
+  height: 150px;
+}
+
+@media screen and (max-width: 480px) {
+  .card-title {
+    font-size: 18px;
+  }
+}

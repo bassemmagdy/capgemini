@@ -1,0 +1,25 @@
+<nav class="navbar nav-container">
+  <div class="container-fluid">
+    <a class="navbar-brand text-reset" routerLink="/home">
+      <h1 class="fs-5 mb-0">
+        <i class="fa-solid fa-clapperboard logo-icon me-2 fa-sm"></i>
+        <span class="fw-bold">Movies</span>
+      </h1>
+    </a>
+    <button type="button" routerLink="/create" class="btn btn-light">
+      Create movie
+    </button>
+
+    <form class="d-flex">
+      <input
+        #searchInput
+        (input)="getSearch(searchInput.value)"
+        class="form-control me-2 search-field"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        [disabled]="searchDisabled"
+      />
+    </form>
+  </div>
+</nav>

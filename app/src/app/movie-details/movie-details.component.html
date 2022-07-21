@@ -1,0 +1,55 @@
+<ng-container>
+  <!-- <div class="card text-center h-100 w-100">
+        <img
+          onerror="this.onerror=null;this.src='./assets/download.png'"
+          class="card-img-top w-10  movies-img"
+          [src]="movie.image_url"
+          alt="movie photo"
+        />
+
+        <div class="card-footer hstack justify-content-between">
+
+        </div>
+      </div>
+      Movie Name: <span class="t-light">{{movie.name}}</span> -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center h-100">
+          <!-- Start Rating Item -->
+          <div class="rating position-absolute top-0 end-0">
+            <span class="fw-bold small ms-1">{{ 100 }}</span>
+          </div>
+          <!-- End Rating Item -->
+          <img
+            onerror="this.onerror=null;this.src='./assets/download.png'"
+            class="card-img-top w-100"
+            [src]="movie.image_object"
+            alt="movie photo"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <!-- Start Card Data -->
+      <div class="card-body">
+        <h2 class="card-title text-center text-capitalize">
+          {{ movie.name }}
+        </h2>
+        <p class="my-2 t-light">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quae
+          sit amet, commodi nobis dolorem quas ut tempore accusantium rerum
+          explicabo sed quibusdam recusandae quod nemo quia aut, doloremque
+          eligendi!
+        </p>
+      </div>
+      <div class="card-footer hstack justify-content-between">
+        <h6 class="small mb-0">Vote Count: <span class="t-light">25</span></h6>
+        <h6 class="small mb-0">
+          First Date:
+          <span class="t-light"> 18/7/2022 </span>
+        </h6>
+      </div>
+    </div>
+  </div>
+</ng-container>

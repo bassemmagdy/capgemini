@@ -1,0 +1,17 @@
+a {
+  font-size: 20px;
+  color: white;
+}
+.nav-container {
+  background-color: #0d2f44;
+}
+.search-field {
+  padding: 0.5rem 1.1rem;
+  width: 70%;
+  line-height: 1;
+  font-size: 15px;
+}
+.container-fluid {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
