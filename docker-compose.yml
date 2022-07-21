@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: 'keinos/sqlite3:latest'
+  backend:
+    build: ./backend/
+    command: >-
+      bash -c "python manage.py makemigrations && python manage.py migrate &&
+      python manage.py runserver 0.0.0.0:8000"
+    container_name: drf-backend
+    ports:
+      - '8000:8000'
+    expose:
+      - '8000'
+    depends_on:
+      - db
+  frontend:
+    build: ./app/
+    image: angular-app
+    ports:
+      - '8080:80'
+    expose:
+      - '8080'
+    depends_on:
+      - backend
