@@ -41,11 +41,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   // Function To Search Api
-  getSearch(keyword: string): void {
+  getSearchMovies(keyword: string): void {
     if (keyword) {
       this.subscription = this._MoviesService
         .getSearch(keyword)
-        .pipe(delay(800))
+        .pipe(delay(1700))
         .subscribe({
           next: (response) => {
             this._MoviesService.searchMovies = response;
