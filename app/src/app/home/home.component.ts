@@ -12,7 +12,9 @@ export class HomeComponent implements OnInit {
   subscription: Subscription = new Subscription();
   moviesAll: any[] = [];
   searchMovies: any[] = [];
+
   constructor(private _MoviesService: MoviesService) {}
+
   ngOnInit(): void {
     this.getMovies();
     this._MoviesService.aosAnimation();
@@ -22,9 +24,12 @@ export class HomeComponent implements OnInit {
       },
     });
   }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
+
+  // get all movies
   getMovies(): void {
     this.subscription = this._MoviesService
       .getMovies()

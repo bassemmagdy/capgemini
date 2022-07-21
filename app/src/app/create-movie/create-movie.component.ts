@@ -27,6 +27,7 @@ export class CreateMovieComponent implements OnInit {
   get f() {
     return this.myForm.controls;
   }
+
   // Watch changes in uploaded file
   onFileChange(event: any) {
     const reader = new FileReader();

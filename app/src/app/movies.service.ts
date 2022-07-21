@@ -13,8 +13,6 @@ export class MoviesService {
   private searchMoviesListBus$ = new BehaviorSubject<any>([]);
   searchMovieList$ = this.searchMoviesListBus$.asObservable();
 
-  imgUrl = 'https://image.tmdb.org/t/p/original'; // img path
-  ratString = 'background-image: linear-gradient(to top,var(--orang-color)'; //rating style
   constructor(private _HttpClient: HttpClient) {}
 
   getMovies(): Observable<any> {
@@ -25,6 +23,7 @@ export class MoviesService {
     return this._HttpClient.get(environment.apiURL + id + '/');
   }
 
+  // Create Api for movie
   createMovie(movieObject: FormData): Observable<any> {
     return this._HttpClient.post(environment.apiURL, {
       name: movieObject.get('name'),
@@ -32,18 +31,22 @@ export class MoviesService {
     });
   }
 
+  // Search Api for finding movies.
   getSearch(keyword: string): Observable<any> {
     return this._HttpClient.get(environment.apiURL + `?search=${keyword}`);
   }
 
+  // Set movie list
   setMoviesList(movies: any) {
     this.movieListBus$.next(movies);
   }
 
+  // Set search list
   setSearchMoviesList(movies: any) {
     this.searchMoviesListBus$.next(movies);
   }
 
+  // init animation
   aosAnimation(): void {
     AOS.init();
   }
